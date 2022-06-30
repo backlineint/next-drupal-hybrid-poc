@@ -1,0 +1,39 @@
+{
+  "id": "next",
+  "name": "Next.js",
+  "category": "static_site_generator",
+  "dev": {
+    "commands": [
+      "yarn dev",
+      "yarn start",
+      "yarn build",
+      "yarn lint"
+    ],
+    "port": 3000,
+    "pollingStrategies": [
+      {
+        "name": "TCP"
+      }
+    ]
+  },
+  "build": {
+    "commands": [
+      "next build"
+    ],
+    "directory": ".next"
+  },
+  "staticAssetsDirectory": [
+    {
+      "local": ".next/static",
+      "remote": "_next/static"
+    },
+    {
+      "local": "public",
+      "remote": "public"
+    }
+  ],
+  "env": {},
+  "plugins": [
+    "@netlify/plugin-nextjs"
+  ]
+}
